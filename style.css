@@ -12,6 +12,6 @@ h1 {
 }
 ul {
     border: #FFFFFF solid 3px;
-    text-decoration: wavy;
+    text-decoration: underline;
     text-decoration-color: #FD98FB;
 }
