@@ -1,0 +1,12 @@
+body {
+    font-family: Arial,  sans-serif;
+    font-size: 16px;
+    background-color: #D6FF6B;
+    color: #5988FF;
+}
+h1 {
+    color: #FD98FB;
+    font-size: 30px;
+    border: 10px;
+    font-family: "Inter", serif;
+}
