@@ -1,3 +1,16 @@
+@keyframes color-change {
+    0% {
+      color: #5988FF;
+    }
+
+    50% {
+      color: #FD98FB;
+    }
+
+    100% {
+      color: #5988FF;
+    }
+  }
 body {
     font-family: Arial,  sans-serif;
     font-size: 16px;
@@ -9,6 +22,14 @@ h1 {
     font-size: 30px;
     border: 10px;
     font-family: "Inter", serif;
+}
+h2 {
+    transition: 1s;
+}
+h2:hover {
+    animation: color-change 3s infinite;
+    font-size: 45px;
+    transition: 1.5s;
 }
 ul {
     border: #FFFFFF solid 3px;
