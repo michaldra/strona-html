@@ -14,28 +14,30 @@
   <header class="header">
     <div class="header__text">
       <h1>Oblicz efektywność energetyczną swojego domu!</h1>
-      <p>Wykaż inicjatywę i rozwiąż problem nadmiernego zużycia energii</p>
+      <p>Wykaż inicjatywę i rozwiąż problem nadmiernego zużycia energii!</p>
     </div>
   </header>
   <main>
     {% block content %}
-    <h2 class="main__title">Wybierz jak duży jest Twój dom:</h2>
-    <ul class="list">
+    <h2 class="main__title">Podaj liczbę urządzeń korzystających z prądu:</h2>
+    <ul class="list" id="list">
+      <!-- Zadanie #3 -->
       <li class="list__item">
-        <a href="/1">
-        <img class="item__img" src="../static/img/home.svg" alt="home">
-        <span>Mały dom</span></a>
+        <a href=""> <!--Ustaw ścieżkę-->
+          <img class="item__img" src="../static/img/battery.svg" alt="battery">
+          <span>3-5 urządzeń</span></a>
       </li>
       <li class="list__item">
-        <a href="/2">
-        <img class="item__img" src="../static/img/home.svg" alt="home">
-        <span>Średni dom</span></a>
+        <a href=""> <!--Ustaw ścieżkę-->
+          <img class="item__img" src="../static/img/battery.svg" alt="battery">
+          <span>6-8 urządzeń</span></a>
       </li>
       <li class="list__item">
-        <a href="/3">
-        <img class="item__img" src="../static/img/home.svg" alt="home">
-        <span>Duży dom</span></a>
+        <a href=""> <!--Ustaw ścieżkę-->
+          <img class="item__img" src="../static/img/battery.svg" alt="battery">
+          <span>10+ urządzeń</span></a>
       </li>
+      <!--  -->
     </ul>
     {% endblock %}
   </main>

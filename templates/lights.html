@@ -14,27 +14,28 @@
   <header class="header">
     <div class="header__text">
       <h1>Oblicz efektywność energetyczną swojego domu!</h1>
-      <p>Wykaż inicjatywę i rozwiąż problem nadmiernego zużycia energii</p>
+      <p>Wykaż inicjatywę i rozwiąż problem nadmiernego zużycia energii!</p>
     </div>
   </header>
   <main>
     {% block content %}
-    <h2 class="main__title">Wybierz jak duży jest Twój dom:</h2>
-    <ul class="list">
+    <h2 class="main__title">Wybierz, ile lamp znajduje się w Twoim domu:</h2>
+    <ul class="list" id="list">
       <li class="list__item">
-        <a href="/1">
-        <img class="item__img" src="../static/img/home.svg" alt="home">
-        <span>Mały dom</span></a>
+        <a href="{{size}}/3">
+          <img class="item__img" src="../static/img/light.svg" alt="light">
+          <span>2-4 lamp</span></a>
+      </li>
+      <!--Zadnaie #2 -->
+      <li class="list__item">
+        <a href=""> <!--Ustaw ścieżkę z dodatkowym komponentem 7-->
+          <img class="item__img" src="../static/img/light.svg" alt="light">
+          <span>4-6 lamp</span></a>
       </li>
       <li class="list__item">
-        <a href="/2">
-        <img class="item__img" src="../static/img/home.svg" alt="home">
-        <span>Średni dom</span></a>
-      </li>
-      <li class="list__item">
-        <a href="/3">
-        <img class="item__img" src="../static/img/home.svg" alt="home">
-        <span>Duży dom</span></a>
+        <a href=""> <!--Ustaw ścieżkę z dodatkowym komponentem 10-->
+          <img class="item__img" src="../static/img/light.svg" alt="light">
+          <span>8+ lamp</span></a>
       </li>
     </ul>
     {% endblock %}
