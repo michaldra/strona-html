@@ -1,21 +1,17 @@
-# Import
 from flask import Flask, render_template, request
 
 
 app = Flask(__name__)
 
 def result_calculate(size, lights, device):
-    # Zmienne umożliwiające obliczenie poboru energii przez urządzenia
     home_coef = 100
     light_coef = 0.04
     devices_coef = 5   
     return size * home_coef + lights * light_coef + device * devices_coef 
 
-# Pierwsza strona
 @app.route('/')
 def index():
     return render_template('index.html')
-# Druga strona
 @app.route('/<size>')
 def lights(size):
     return render_template(
@@ -23,7 +19,6 @@ def lights(size):
                             size=size
                            )
 
-# Trzecia strona
 @app.route('/<size>/<lights>')
 def electronics(size, lights):
     return render_template(
@@ -32,7 +27,6 @@ def electronics(size, lights):
                             lights = lights                           
                            )
 
-# Obliczenia
 @app.route('/<size>/<lights>/<device>')
 def end(size, lights, device):
     return render_template('end.html', 
@@ -41,7 +35,6 @@ def end(size, lights, device):
                                                     int(device)
                                                     )
                         )
-# Formularz
 @app.route('/form')
 def form():
     return render_template('form.html')
@@ -53,9 +46,10 @@ def submit_form():
     email = request.form['email']
     date = request.form['date']
 
-    # Możesz zapisać swoje dane lub wysłać je e-mailem
+    with open('form.txt', 'w', encoding='utf-8') as f:
+        f.write(name + '\n' + address + '\n' + email + '\n' + date)
+
     return render_template('form_result.html', 
-                           # Umieść tutaj zmienne
                            name=name,
                            address=address,
                            email=email,

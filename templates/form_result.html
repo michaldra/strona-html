@@ -18,15 +18,13 @@
     </div>
   </header>
   <main>
-    <h1>Dane z formulaza</h1>
-    <ul>
-        <li>
-            <p>{{name}}</p>
-            <p>{{address}}</p>
-            <p>{{date}}</p>
-            <p>{{email}}</p>
-        </li>
-    </ul>
+    {% block content %}
+      <h1>Dziękujemy za wypełnienie formularza!</h1>
+      <p>Twoje imię: {{name}}</p>
+      <p>Twój e-mail: {{email}}</p>
+      <p>Twój adres: {{address}}</p>
+      <p>Termin przyjazdu: {{date}}</p>
+    {% endblock %}
   </main>
   <footer>
 
